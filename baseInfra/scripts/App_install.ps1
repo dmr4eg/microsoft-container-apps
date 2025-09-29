@@ -97,7 +97,7 @@ Expand-Archive -Path $ZipFile -DestinationPath 'C:\' -Force
 ###########################################################################
 # 3. Create start script
 ###########################################################################
-$connStr = "Server=$SqlServer;Database=$AppDbName;User Id=$AppLogin;Password=$AppPassword;Encrypt=True;TrustServerCertificate=True"
+$connStr = "Server=tcp:dev-sqlserver-025.database.windows.net,1433;Initial Catalog=dev-sqldb-025;Persist Security Info=False;User ID=sqladmin;Password=P@ssw0rd!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 $startScriptLines = @(
     '# Auto-generated start script'
     "Set-Location 'C:\\MicroHack-AppInnovation-main\\dotnet'"
